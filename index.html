@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Savannah Wilcox</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bone:#FDF9F6;
+  --ink:#2E2A2E;
+  --ink-soft:#6B646B;
+  --peach:#FFE0CE;
+  --lavender:#E9DCF5;
+  --mint:#D2EDE5;
+  --rose:#FBD5E2;
+  --butter:#FDF0C8;
+  --sky:#D8E8F5;
+  --plum:#8B5A7C;
+  --plum-soft:rgba(139,90,124,.14);
+  --rule:#EFE4EA;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body{
+  background:var(--bone);
+  color:var(--ink);
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  font-size:17px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+.wrap{max-width:860px;margin:0 auto;padding:0 28px;position:relative;z-index:2}
+
+h1,h2,h3{
+  font-family:'Fraunces',Georgia,serif;
+  font-variation-settings:'SOFT' 45,'WONK' 1;
+  font-weight:400;
+  line-height:1.12;
+  letter-spacing:-0.015em;
+}
+h1{font-size:clamp(2.7rem,7.5vw,4.4rem)}
+h2{font-size:clamp(1.8rem,4vw,2.4rem);margin-bottom:8px}
+h3{font-size:1.22rem;font-weight:600}
+
+.eyebrow{
+  font-size:.71rem;font-weight:600;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--plum);margin-bottom:14px;
+}
+
+section{padding:92px 0;position:relative}
+.tint-peach{background:var(--peach)}
+.tint-lavender{background:var(--lavender)}
+.tint-mint{background:var(--mint)}
+
+.section-head{margin-bottom:42px;max-width:60ch}
+.section-head p{color:var(--ink-soft);margin-top:10px}
+
+/* ---------- hero with pastel blobs ---------- */
+.hero{padding:96px 0 84px;position:relative;overflow:hidden}
+.blob{
+  position:absolute;border-radius:50%;filter:blur(52px);
+  opacity:.55;pointer-events:none;z-index:1;
+  animation:drift 22s ease-in-out infinite alternate;
+}
+.blob-1{width:420px;height:420px;background:var(--rose);top:-160px;right:-110px}
+.blob-2{width:340px;height:340px;background:var(--butter);top:150px;left:-140px;animation-delay:-7s}
+.blob-3{width:300px;height:300px;background:var(--sky);bottom:-140px;right:22%;animation-delay:-14s}
+@keyframes drift{
+  from{transform:translate(0,0) scale(1)}
+  to{transform:translate(26px,-22px) scale(1.09)}
+}
+
+.hero-grid{display:grid;grid-template-columns:164px 1fr;gap:38px;align-items:center}
+
+.portrait-frame{
+  width:164px;height:164px;
+  border-radius:50%;
+  overflow:hidden;
+  flex-shrink:0;
+  background:var(--lavender);
+  box-shadow:0 0 0 5px var(--bone),0 0 0 7px var(--plum-soft),
+             0 14px 34px rgba(139,90,124,.2);
+}
+.portrait-frame img{
+  width:100%;height:100%;
+  object-fit:cover;object-position:center 22%;
+  display:block;
+}
+
+.hero p.lede{font-size:1.13rem;color:var(--ink-soft);margin-top:18px;max-width:52ch}
+.hero .meta{margin-top:22px;font-size:.85rem;color:var(--ink-soft);display:flex;flex-wrap:wrap;gap:8px 18px}
+
+/* ---------- filter bar ---------- */
+.filter-bar{
+  display:flex;flex-wrap:wrap;gap:8px;align-items:center;
+  margin-bottom:34px;
+}
+.filter-bar .label{
+  font-size:.72rem;font-weight:600;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink-soft);margin-right:6px;
+}
+.chip{
+  font-family:inherit;font-size:.82rem;
+  border:1px solid var(--rule);background:#fff;color:var(--ink-soft);
+  border-radius:20px;padding:6px 15px;cursor:pointer;
+  transition:transform .16s,background .16s,color .16s,border-color .16s;
+}
+.chip:hover{transform:translateY(-2px)}
+.chip.on{background:var(--plum);color:#fff;border-color:var(--plum)}
+.chip:focus-visible{outline:2px solid var(--plum);outline-offset:3px}
+
+/* ---------- project cards ---------- */
+.project{
+  background:#fff;border:1px solid var(--rule);border-radius:18px;
+  padding:30px 30px 26px;margin-bottom:20px;
+  box-shadow:0 3px 16px rgba(139,90,124,.06);
+  transition:transform .22s,box-shadow .22s,opacity .3s;
+}
+.project:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(139,90,124,.13)}
+.project.hidden{display:none}
+
+.project-top{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.status{
+  font-size:.68rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;
+  border-radius:20px;padding:4px 12px;white-space:nowrap;
+}
+.status.live{background:var(--mint);color:#2E6B5C}
+.status.progress{background:var(--butter);color:#8A6A18}
+.status.ongoing{background:var(--sky);color:#3A6285}
+
+.project p{margin-top:12px;color:var(--ink-soft)}
+
+.figures{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:22px 0 4px}
+.figure{border-radius:13px;padding:17px 19px}
+.figure:nth-child(1){background:var(--rose)}
+.figure:nth-child(2){background:var(--mint)}
+.figure .val{
+  font-family:'Fraunces',Georgia,serif;font-variation-settings:'SOFT' 45;
+  font-size:1.65rem;font-weight:700;display:block;margin-bottom:4px;line-height:1.1;
+}
+.figure .cap{font-size:.75rem;color:var(--ink-soft);line-height:1.45;display:block}
+
+.stack{margin-top:18px;display:flex;flex-wrap:wrap;gap:7px}
+.tag{
+  font-size:.73rem;background:var(--bone);border:1px solid var(--rule);
+  border-radius:6px;padding:3px 10px;color:var(--ink-soft);
+}
+.tag.match{background:var(--lavender);border-color:#CBB4E4;color:var(--plum);font-weight:500}
+
+.disclose{
+  margin-top:18px;font-family:inherit;font-size:.84rem;font-weight:600;
+  background:none;border:none;color:var(--plum);cursor:pointer;padding:0;
+  display:inline-flex;align-items:center;gap:7px;
+}
+.disclose:focus-visible{outline:2px solid var(--plum);outline-offset:3px;border-radius:3px}
+.disclose .caret{transition:transform .22s;display:inline-block;font-size:.7em}
+.disclose[aria-expanded="true"] .caret{transform:rotate(90deg)}
+
+.detail{max-height:0;overflow:hidden;transition:max-height .34s ease}
+.detail.open{max-height:620px}
+.detail-inner{
+  margin-top:15px;padding:17px 20px;background:var(--bone);
+  border-left:3px solid var(--plum);border-radius:0 10px 10px 0;
+  font-size:.93rem;line-height:1.6;
+}
+.detail-inner strong{color:var(--ink)}
+.detail-inner p + p{margin-top:11px}
+
+.links{margin-top:18px;display:flex;gap:20px;flex-wrap:wrap}
+a{color:var(--plum);text-decoration:none;border-bottom:1px solid rgba(139,90,124,.3);transition:border-color .18s}
+a:hover{border-bottom-color:var(--plum)}
+a:focus-visible{outline:2px solid var(--plum);outline-offset:3px;border-radius:2px}
+
+.empty{
+  display:none;text-align:center;padding:44px;color:var(--ink-soft);
+  background:#fff;border:1px dashed var(--rule);border-radius:18px;
+}
+.empty.show{display:block}
+
+/* ---------- skills ---------- */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:26px}
+.skill-card{background:rgba(255,255,255,.6);border-radius:15px;padding:24px}
+.skill-card h3{
+  margin-bottom:12px;font-family:'Inter',sans-serif;font-size:.75rem;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--plum);
+}
+.skill-card ul{list-style:none}
+.skill-card li{padding:6px 0;border-bottom:1px solid rgba(46,42,46,.07);font-size:.93rem}
+.skill-card li:last-child{border-bottom:none}
+
+/* ---------- contact ---------- */
+.contact-links{display:flex;flex-direction:column;gap:13px;margin-top:24px;font-size:1.05rem}
+footer{padding:38px 0;font-size:.79rem;color:var(--ink-soft);border-top:1px solid var(--rule)}
+
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .65s ease,transform .65s ease}
+.reveal.in{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  .blob{animation:none}
+  .project,.chip{transition:none}
+}
+
+@media (max-width:640px){
+  section{padding:66px 0}
+  .hero{padding:70px 0 62px}
+  .hero-grid{grid-template-columns:1fr;gap:26px}
+  .project{padding:24px 22px}
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="portrait-frame">
+        <img src="photo.jpg" alt="Savannah Wilcox">
+      </div>
+      <div>
+        <h1>Savannah Wilcox</h1>
+        <p class="lede">Healthcare management student and analytics intern. I work with clinical and operational data — reporting, reconciliation, and the analysis that turns messy source systems into numbers people can act on.</p>
+        <div class="meta">
+          <span>UT Dallas &middot; Jindal School of Management</span>
+          <span>B.S. Healthcare Management, 2027</span>
+          <span>Dallas–Fort Worth</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="tint-peach reveal">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">About</div>
+      <h2>I build the reporting operations actually runs on</h2>
+    </div>
+    <p style="max-width:62ch;color:var(--ink-soft)">
+      I'm studying healthcare management at UT Dallas and working as an analytics intern at a medical aesthetics and wellness clinic, where I handle financial reporting, inventory reconciliation, and performance analysis. A lot of the work is figuring out why two systems disagree about the same number, then building the process that keeps them aligned.
+    </p>
+    <p style="max-width:62ch;color:var(--ink-soft);margin-top:16px">
+      Outside of work I build things with public healthcare and market datasets, mostly to practice the full path from raw source files to a result someone could act on.
+    </p>
+    <p style="max-width:62ch;color:var(--ink-soft);margin-top:16px">
+      I'm aiming for healthcare data analytics, revenue cycle analysis, or EHR implementation work after graduation.
+    </p>
+  </div>
+</section>
+
+<section class="reveal">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Projects</div>
+      <h2>Selected work</h2>
+      <p>Filter by tool to see where each one shows up.</p>
+    </div>
+
+    <div class="filter-bar" id="filters">
+      <span class="label">Filter</span>
+      <button class="chip on" data-tool="all">All</button>
+      <button class="chip" data-tool="Python">Python</button>
+      <button class="chip" data-tool="SQL">SQL</button>
+      <button class="chip" data-tool="pandas">pandas</button>
+      <button class="chip" data-tool="JavaScript">JavaScript</button>
+      <button class="chip" data-tool="Excel">Excel</button>
+    </div>
+
+    <article class="project" data-tools="Python,pandas,SciPy,FAERS">
+      <div class="project-top">
+        <h3>FDA Adverse Event Signal Analysis</h3>
+        <span class="status progress">In progress</span>
+      </div>
+      <p>Disproportionality analysis of FDA's FAERS database, computing reporting odds ratios with confidence intervals across 150,421 drug–reaction pairs drawn from 385,288 deduplicated case reports, with a Benjamini–Hochberg correction for multiple testing.</p>
+
+      <div class="figures">
+        <div class="figure">
+          <span class="val" data-count="0.76" data-decimals="2" data-prefix="ρ = ">ρ = 0.76</span>
+          <span class="cap">Correlation between signal strength and how concentrated an event's reporting is in one drug</span>
+        </div>
+        <div class="figure">
+          <span class="val" data-count="98" data-suffix=" / 100">98 / 100</span>
+          <span class="cap">Top-ranked signals traceable to a single drug dominating reports of that event</span>
+        </div>
+      </div>
+
+      <button class="disclose" aria-expanded="false"><span class="caret">▶</span>How it works</button>
+      <div class="detail">
+        <div class="detail-inner">
+          <p><strong>The finding.</strong> On a single quarter of FAERS, the strongest statistical signals reflect reporting patterns more than pharmacology. Litigation-linked reporting clusters and high-polypharmacy submissions each produce them, and together they account for 65% of all nominal signals.</p>
+          <p><strong>Method.</strong> Deduplicated by case ID keeping the latest version, identified drugs by active ingredient rather than free-text name, and restricted to primary and secondary suspect drugs. Every 2×2 contingency table is verified to sum to the population count at runtime.</p>
+          <p><strong>Validation.</strong> Before artifact filtering, top candidates included pharmacologically absurd pairs like a topical steroid with congenital hiatus hernia. After filtering, the same positions are held by documented adverse effects — testosterone with polycythaemia, daptomycin with eosinophilic pneumonia, CAR-T therapy with immune effector cell-associated neurotoxicity.</p>
+        </div>
+      </div>
+
+      <div class="stack"><span class="tag">Python</span><span class="tag">pandas</span><span class="tag">SciPy</span><span class="tag">FAERS</span></div>
+      <div class="links"><a href="https://github.com/Savannahwilcox/Drug-Reaction_Analysis">Repository</a></div>
+    </article>
+
+    <article class="project" data-tools="Python,SQL,JavaScript,SQLite,scikit-learn">
+      <div class="project-top">
+        <h3>Flight Price Predictor</h3>
+        <span class="status live">Live</span>
+      </div>
+      <p>A daily collector pulls flight prices from the Google Flights API into SQLite and trains a classifier to predict whether a given flight's price will rise before departure. The full pipeline — collection, training, evaluation, and dashboard deployment — runs unattended on GitHub Actions.</p>
+
+      <button class="disclose" aria-expanded="false"><span class="caret">▶</span>How it works</button>
+      <div class="detail">
+        <div class="detail-inner">
+          <p><strong>Evaluation.</strong> Chronological train/test split so the model is scored only on data it hasn't seen. A random split would leak future prices into training. Every accuracy figure is reported against a majority-class baseline, since accuracy without that comparison isn't interpretable.</p>
+          <p><strong>Data integrity.</strong> Records are tagged by source, so live API prices stay separate from the simulated fallback the collector uses when the API times out. The model trains on real prices only.</p>
+          <p><strong>Automation.</strong> GitHub Actions runs the pipeline nightly, commits the updated database, and redeploys the dashboard to GitHub Pages.</p>
+        </div>
+      </div>
+
+      <div class="stack"><span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">SQLite</span><span class="tag">JavaScript</span><span class="tag">GitHub Actions</span></div>
+      <div class="links">
+        <a href="https://savannahwilcox.github.io/flight-price-predictor">Live dashboard</a>
+        <a href="https://github.com/Savannahwilcox/flight-price-predictor">Repository</a>
+      </div>
+    </article>
+
+    <article class="project" data-tools="SQL,Excel">
+      <div class="project-top">
+        <h3>Clinic Operations Analytics</h3>
+        <span class="status ongoing">Ongoing</span>
+      </div>
+      <p>Internship work at a medical aesthetics and wellness clinic: reconciling the wellness service line's profit and loss, running the practice's first full inventory audit, building recurring KPI reporting from the practice management system, and modeling the revenue impact of membership pricing changes.</p>
+
+      <button class="disclose" aria-expanded="false"><span class="caret">▶</span>What this involved</button>
+      <div class="detail">
+        <div class="detail-inner">
+          <p><strong>Inventory audit.</strong> The practice's first, resolving stock balances that had drifted negative across multiple product lines by reconstructing historical purchase orders.</p>
+          <p><strong>Financial reconciliation.</strong> Traced invoice-level discrepancies in the wellness service line back to their source in the ordering system, then documented the corrected margin.</p>
+          <p><strong>Reporting.</strong> Built the recurring KPI workflow the clinic now runs on, including provider-level performance analysis.</p>
+          <p>Client data, so no public repository — happy to walk through the methodology.</p>
+        </div>
+      </div>
+
+      <div class="stack"><span class="tag">SQL</span><span class="tag">Excel</span><span class="tag">Zenoti</span><span class="tag">Financial reconciliation</span></div>
+    </article>
+
+    <div class="empty" id="empty">No projects use that tool yet.</div>
+  </div>
+</section>
+
+<section class="tint-mint reveal">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Tools</div>
+      <h2>What I work with</h2>
+    </div>
+    <div class="skills">
+      <div class="skill-card">
+        <h3>Analysis</h3>
+        <ul><li>SQL</li><li>Python — pandas</li><li>Excel — pivot tables, financial modeling</li><li>Tableau</li><li>SQLite</li></ul>
+      </div>
+      <div class="skill-card">
+        <h3>Healthcare operations</h3>
+        <ul><li>Zenoti practice management</li><li>Revenue cycle concepts</li><li>Inventory reconciliation</li><li>Financial reconciliation</li><li>KPI reporting</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tint-lavender reveal">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Contact</div>
+      <h2>Get in touch</h2>
+      <p>Open to internships and new-grad roles in healthcare analytics.</p>
+    </div>
+    <div class="contact-links">
+      <span>Email — <a href="mailto:savannahwilcox204@gmail.com">savannahwilcox204@gmail.com</a></span>
+      <span>LinkedIn — <a href="https://www.linkedin.com/in/savannahwilcox/">linkedin.com/in/savannahwilcox</a></span>
+      <span>GitHub — <a href="https://github.com/Savannahwilcox">github.com/Savannahwilcox</a></span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Built from scratch. Last updated July 2026.</div>
+</footer>
+
+<script>
+// scroll reveal
+const obs = new IntersectionObserver((es) => {
+  es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+// expandable detail panels
+document.querySelectorAll('.disclose').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const panel = btn.nextElementSibling;
+    const open = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!open));
+    panel.classList.toggle('open', !open);
+  });
+});
+
+// tool filtering
+const chips = document.querySelectorAll('.chip');
+const projects = document.querySelectorAll('.project');
+const empty = document.getElementById('empty');
+
+chips.forEach(chip => {
+  chip.addEventListener('click', () => {
+    chips.forEach(c => c.classList.remove('on'));
+    chip.classList.add('on');
+    const tool = chip.dataset.tool;
+    let shown = 0;
+
+    projects.forEach(p => {
+      const tools = p.dataset.tools.split(',');
+      const match = tool === 'all' || tools.includes(tool);
+      p.classList.toggle('hidden', !match);
+      if (match) shown++;
+
+      p.querySelectorAll('.tag').forEach(t => {
+        t.classList.toggle('match', tool !== 'all' && t.textContent.trim() === tool);
+      });
+    });
+
+    empty.classList.toggle('show', shown === 0);
+  });
+});
+
+// count-up on the stat figures
+const counters = document.querySelectorAll('.val[data-count]');
+const cObs = new IntersectionObserver((es) => {
+  es.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target;
+    cObs.unobserve(el);
+    const target = parseFloat(el.dataset.count);
+    const dec = parseInt(el.dataset.decimals || '0', 10);
+    const pre = el.dataset.prefix || '';
+    const suf = el.dataset.suffix || '';
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    let start = null;
+    const dur = 1100;
+    function step(ts) {
+      if (!start) start = ts;
+      const p = Math.min((ts - start) / dur, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = pre + (target * eased).toFixed(dec) + suf;
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  });
+}, { threshold: 0.5 });
+counters.forEach(c => cObs.observe(c));
+</script>
+
+</body>
+</html>
