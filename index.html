@@ -230,7 +230,7 @@ footer{padding:38px 0;font-size:.79rem;color:var(--ink-soft);border-top:1px soli
       </div>
       <div>
         <h1>Savannah Wilcox</h1>
-        <p class="lede">Healthcare management student and analytics intern. I work with clinical and operational data: reporting, reconciliation, and the analysis that turns messy source systems into numbers people can act on.</p>
+        <p class="lede">Healthcare management student and analytics intern. I work on reporting, reconciliation, and operational analysis for a medical clinic, and I'm headed toward healthcare data analytics after graduation.</p>
         <div class="meta">
           <span>UT Dallas &middot; Jindal School of Management</span>
           <span>B.S. Healthcare Management, 2027</span>
@@ -245,13 +245,13 @@ footer{padding:38px 0;font-size:.79rem;color:var(--ink-soft);border-top:1px soli
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">About</div>
-      <h2>I build the reporting operations actually runs on</h2>
+      <h2>Healthcare operations, measured</h2>
     </div>
     <p style="max-width:62ch;color:var(--ink-soft)">
       I'm studying healthcare management at UT Dallas and working as an analytics intern at a medical aesthetics and wellness clinic, where I handle financial reporting, inventory reconciliation, and performance analysis. A lot of the work is figuring out why two systems disagree about the same number, then building the process that keeps them aligned.
     </p>
     <p style="max-width:62ch;color:var(--ink-soft);margin-top:16px">
-      Outside of work I build things with public healthcare and market datasets, mostly to practice the full path from raw source files to a result someone could act on.
+      Outside of work I build projects with public healthcare datasets, mostly CMS data.
     </p>
     <p style="max-width:62ch;color:var(--ink-soft);margin-top:16px">
       I'm aiming for healthcare data analytics, revenue cycle analysis, or EHR implementation work after graduation.
@@ -264,7 +264,6 @@ footer{padding:38px 0;font-size:.79rem;color:var(--ink-soft);border-top:1px soli
     <div class="section-head">
       <div class="eyebrow">Projects</div>
       <h2>Selected work</h2>
-      <p>Filter by tool to see where each one shows up.</p>
     </div>
 
     <div class="filter-bar" id="filters">
@@ -272,9 +271,31 @@ footer{padding:38px 0;font-size:.79rem;color:var(--ink-soft);border-top:1px soli
       <button class="chip on" data-tool="all">All</button>
       <button class="chip" data-tool="Python">Python</button>
       <button class="chip" data-tool="SQL">SQL</button>
+      <button class="chip" data-tool="pandas">pandas</button>
       <button class="chip" data-tool="JavaScript">JavaScript</button>
       <button class="chip" data-tool="Excel">Excel</button>
     </div>
+
+    <article class="project" data-tools="Python,pandas,CMS data">
+      <div class="project-top">
+        <h3>Hospital Readmissions by Ownership Type</h3>
+        <span class="status live">Complete</span>
+      </div>
+      <p>Analysis of CMS Hospital Readmissions Reduction Program data covering 2,616 hospitals. For-profit hospitals average higher excess readmission ratios than nonprofits, and the gap holds after accounting for hospital size.</p>
+
+      <button class="disclose" aria-expanded="false"><span class="caret">▶</span>How it works</button>
+      <div class="detail">
+        <div class="detail-inner">
+          <p><strong>The question.</strong> CMS penalizes hospitals that readmit more patients than expected given their patient mix. Does that vary by ownership, and if so, is ownership doing the work or standing in for something else?</p>
+          <p><strong>The confound.</strong> Smaller hospitals have higher readmission ratios, and for-profit hospitals are smaller on average (median 192 heart failure discharges versus 333). So the ownership difference could have been a size difference.</p>
+          <p><strong>Stratification.</strong> Splitting hospitals into size quartiles and comparing ownership within each one shows for-profit ratios higher in all four bands, with the gap widening at larger sizes rather than closing. The pattern also holds across all six conditions CMS measures.</p>
+          <p><strong>What it can't show.</strong> This is descriptive. Unmeasured factors like local population health or access to post-discharge care could explain both. No significance testing was run.</p>
+        </div>
+      </div>
+
+      <div class="stack"><span class="tag">Python</span><span class="tag">pandas</span><span class="tag">matplotlib</span><span class="tag">CMS data</span></div>
+      <div class="links"><a href="https://github.com/Savannahwilcox/Hospital-Readmissions">Repository</a></div>
+    </article>
 
     <article class="project" data-tools="Python,SQL,JavaScript,SQLite,scikit-learn">
       <div class="project-top">
@@ -358,7 +379,7 @@ footer{padding:38px 0;font-size:.79rem;color:var(--ink-soft);border-top:1px soli
 </section>
 
 <footer>
-  <div class="wrap">Built from scratch. Last updated July 2026.</div>
+  <div class="wrap">Last updated July 2026.</div>
 </footer>
 
 <script>
