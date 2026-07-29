@@ -272,41 +272,9 @@ footer{padding:38px 0;font-size:.79rem;color:var(--ink-soft);border-top:1px soli
       <button class="chip on" data-tool="all">All</button>
       <button class="chip" data-tool="Python">Python</button>
       <button class="chip" data-tool="SQL">SQL</button>
-      <button class="chip" data-tool="pandas">pandas</button>
       <button class="chip" data-tool="JavaScript">JavaScript</button>
       <button class="chip" data-tool="Excel">Excel</button>
     </div>
-
-    <article class="project" data-tools="Python,pandas,SciPy,FAERS">
-      <div class="project-top">
-        <h3>FDA Adverse Event Signal Analysis</h3>
-        <span class="status progress">In progress</span>
-      </div>
-      <p>Disproportionality analysis of FDA's FAERS database, computing reporting odds ratios with confidence intervals across 150,421 drug-reaction pairs drawn from 385,288 deduplicated case reports, with a Benjamini-Hochberg correction for multiple testing.</p>
-
-      <div class="figures">
-        <div class="figure">
-          <span class="val" data-count="0.76" data-decimals="2" data-prefix="ρ = ">ρ = 0.76</span>
-          <span class="cap">Correlation between signal strength and how concentrated an event's reporting is in one drug</span>
-        </div>
-        <div class="figure">
-          <span class="val" data-count="98" data-suffix=" / 100">98 / 100</span>
-          <span class="cap">Top-ranked signals traceable to a single drug dominating reports of that event</span>
-        </div>
-      </div>
-
-      <button class="disclose" aria-expanded="false"><span class="caret">▶</span>How it works</button>
-      <div class="detail">
-        <div class="detail-inner">
-          <p><strong>The finding.</strong> On a single quarter of FAERS, the strongest statistical signals reflect reporting patterns more than pharmacology. Litigation-linked reporting clusters and high-polypharmacy submissions each produce them, and together they account for 65% of all nominal signals.</p>
-          <p><strong>Method.</strong> Deduplicated by case ID keeping the latest version, identified drugs by active ingredient rather than free-text name, and restricted to primary and secondary suspect drugs. Every 2×2 contingency table is verified to sum to the population count at runtime.</p>
-          <p><strong>Validation.</strong> Before artifact filtering, top candidates included pharmacologically absurd pairs like a topical steroid with congenital hiatus hernia. After filtering, the same positions are held by documented adverse effects: testosterone with polycythaemia, daptomycin with eosinophilic pneumonia, CAR-T therapy with immune effector cell-associated neurotoxicity.</p>
-        </div>
-      </div>
-
-      <div class="stack"><span class="tag">Python</span><span class="tag">pandas</span><span class="tag">SciPy</span><span class="tag">FAERS</span></div>
-      <div class="links"><a href="https://github.com/Savannahwilcox/Drug-Reaction_Analysis">Repository</a></div>
-    </article>
 
     <article class="project" data-tools="Python,SQL,JavaScript,SQLite,scikit-learn">
       <div class="project-top">
