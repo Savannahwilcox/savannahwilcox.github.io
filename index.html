@@ -297,26 +297,47 @@ footer{padding:38px 0;font-size:.79rem;color:var(--ink-soft);border-top:1px soli
       <div class="links"><a href="https://github.com/Savannahwilcox/Hospital-Readmissions-">Repository</a></div>
     </article>
 
-    <article class="project" data-tools="Python,SQL,JavaScript,SQLite,scikit-learn">
+        <article class="project" data-tools="Python,pandas,scikit-learn">
       <div class="project-top">
         <h3>Flight Price Predictor</h3>
-        <span class="status live">Live</span>
+        <span class="status portfolio">Portfolio</span>
       </div>
-      <p>A daily collector pulls flight prices from the Google Flights API into SQLite and trains a classifier to predict whether a given flight's price will rise before departure. The full pipeline, from collection through training, evaluation, and dashboard deployment, runs unattended on GitHub Actions.</p>
+      <p>Machine learning pipeline that trains a Random Forest classifier to predict whether flight prices will rise or fall. Demonstrates end-to-end data science workflow: data collection, model training, prediction, and analysis with visualizations.</p>
 
-      <button class="disclose" aria-expanded="false"><span class="caret">▶</span>How it works</button>
+      <button class="disclose" aria-expanded="false"><span class="caret">▶</span>What this involved</button>
       <div class="detail">
         <div class="detail-inner">
-          <p><strong>Evaluation.</strong> Chronological train/test split so the model is scored only on data it hasn't seen. A random split would leak future prices into training. Every accuracy figure is reported against a majority-class baseline, since accuracy without that comparison isn't interpretable.</p>
-          <p><strong>Data integrity.</strong> Records are tagged by source, so live API prices stay separate from the simulated fallback the collector uses when the API times out. The model trains on real prices only.</p>
-          <p><strong>Automation.</strong> GitHub Actions runs the pipeline nightly, commits the updated database, and redeploys the dashboard to GitHub Pages.</p>
+          <p><strong>Data collection.</strong> Sample dataset of 9 flights across 3 airlines and 2 routes.</p>
+          <p><strong>Model training.</strong> Random Forest classifier on 70% of data, evaluated on 30% holdout set.</p>
+          <p><strong>Analysis.</strong> Generated visualizations: price distribution by airline, price vs days until departure, and feature importance rankings.</p>
         </div>
       </div>
 
-      <div class="stack"><span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">SQLite</span><span class="tag">JavaScript</span><span class="tag">GitHub Actions</span></div>
+      <div class="stack"><span class="tag">Python</span><span class="tag">pandas</span><span class="tag">scikit-learn</span><span class="tag">matplotlib</span></div>
       <div class="links">
-        <a href="https://savannahwilcox.github.io/flight-price-predictor">Live dashboard</a>
         <a href="https://github.com/Savannahwilcox/flight-price-predictor">Repository</a>
+      </div>
+    </article>
+
+    <article class="project" data-tools="Python,pandas,scikit-learn">
+      <div class="project-top">
+        <h3>Credit Card Fraud Detection</h3>
+        <span class="status portfolio">Portfolio</span>
+      </div>
+      <p>Comparison of unsupervised and supervised approaches to detect fraudulent credit card transactions. Analyzes 284K transactions with highly imbalanced fraud rate (0.17%) to demonstrate handling real-world data challenges.</p>
+
+      <button class="disclose" aria-expanded="false"><span class="caret">▶</span>What this involved</button>
+      <div class="detail">
+        <div class="detail-inner">
+          <p><strong>Anomaly detection.</strong> Isolation Forest catches 16.9% of fraud with 70.9% false positives—effective for unsupervised scenarios.</p>
+          <p><strong>Supervised classification.</strong> Random Forest achieves 76% recall and 0.967 ROC-AUC, catching 3x more fraud than anomaly detection.</p>
+          <p><strong>Analysis.</strong> V14, V4, V10 emerge as strongest fraud indicators. Demonstrated importance of class weighting for imbalanced data.</p>
+        </div>
+      </div>
+
+      <div class="stack"><span class="tag">Python</span><span class="tag">pandas</span><span class="tag">scikit-learn</span><span class="tag">Jupyter</span></div>
+      <div class="links">
+        <a href="https://github.com/Savannahwilcox/fraud-detection-analysis">Repository</a>
       </div>
     </article>
 
