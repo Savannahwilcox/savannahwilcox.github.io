@@ -271,6 +271,8 @@ footer{padding:38px 0;font-size:.79rem;color:var(--ink-soft);border-top:1px soli
       <button class="chip on" data-tool="all">All</button>
       <button class="chip" data-tool="Python">Python</button>
       <button class="chip" data-tool="SQL">SQL</button>
+      <button class="chip" data-tool="PostgreSQL">PostgreSQL</button>
+      <button class="chip" data-tool="Tableau">Tableau</button>
       <button class="chip" data-tool="pandas">pandas</button>
       <button class="chip" data-tool="JavaScript">JavaScript</button>
       <button class="chip" data-tool="Excel">Excel</button>
@@ -359,6 +361,45 @@ footer{padding:38px 0;font-size:.79rem;color:var(--ink-soft);border-top:1px soli
       </div>
 
       <div class="stack"><span class="tag">SQL</span><span class="tag">Excel</span><span class="tag">Zenoti</span><span class="tag">Financial reconciliation</span></div>
+    </article>
+
+    <article class="project" data-tools="SQL,PostgreSQL,Tableau,CMS data">
+      <div class="project-top">
+        <h3>Medicare Claims Analytics</h3>
+        <span class="status live">Complete</span>
+      </div>
+
+      <p>PostgreSQL and Tableau analysis of CMS synthetic Medicare beneficiary, inpatient, and outpatient claims data. The project includes relational database design, data validation, provider performance analysis, diagnosis cost analysis, and two interactive dashboards.</p>
+
+      <button class="disclose" aria-expanded="false">
+        <span class="caret">▶</span>What this involved
+      </button>
+
+      <div class="detail">
+        <div class="detail-inner">
+          <p><strong>Database development.</strong> Created raw staging and analysis-ready PostgreSQL tables for beneficiary, inpatient, and outpatient claims data.</p>
+
+          <p><strong>SQL analysis.</strong> Used joins, CTEs, window functions, CASE statements, aggregations, and validation queries to examine utilization, chronic conditions, provider performance, and Medicare spending.</p>
+
+          <p><strong>Executive reporting.</strong> Built an executive dashboard covering 116,352 synthetic beneficiaries, 66,547 inpatient claims, 779,225 outpatient claims, and $845.5 million in Medicare payments.</p>
+
+          <p><strong>Cost-driver analysis.</strong> Built a provider performance matrix and diagnosis-level analyses comparing claim volume, average payment, total reimbursement, and length of stay.</p>
+        </div>
+      </div>
+
+      <div class="stack">
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">SQL</span>
+        <span class="tag">Tableau</span>
+        <span class="tag">CMS data</span>
+        <span class="tag">Healthcare analytics</span>
+      </div>
+
+      <div class="links">
+        <a href="https://github.com/Savannahwilcox/healthcare-claims-sql-analysis">Repository</a>
+        <a href="https://public.tableau.com/app/profile/savannah.wilcox4290/viz/MedicareClaimsUtilizationPaymentAnalysisDB1/Dashboard1?publish=yes">Executive Dashboard</a>
+        <a href="https://public.tableau.com/app/profile/savannah.wilcox4290/viz/MedicareClaimsUtilizationPaymentAnalysisDB2/ProviderPerformanceCostDrivers?publish=yes">Provider Dashboard</a>
+      </div>
     </article>
 
         <article class="project" data-tools="Python,pandas,Tableau,CDC data">
