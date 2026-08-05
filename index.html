@@ -278,6 +278,7 @@ footer{padding:38px 0;font-size:.79rem;color:var(--ink-soft);border-top:1px soli
       <button class="chip" data-tool="Excel">Excel</button>
       <button class="chip" data-tool="Plotly">Plotly</button>
       <button class="chip" data-tool="Streamlit">Streamlit</button>
+      <button class="chip" data-tool="SciPy">SciPy</button>
     </div>
  
     <article class="project" data-tools="Python,pandas,CMS data">
@@ -301,6 +302,27 @@ footer{padding:38px 0;font-size:.79rem;color:var(--ink-soft);border-top:1px soli
       <div class="links"><a href="https://github.com/Savannahwilcox/Hospital-Readmissions-">Repository</a></div>
     </article>
  
+    <article class="project" data-tools="Python,pandas,SciPy,CDC data">
+      <div class="project-top">
+        <h3>Xylazine ("Tranq") in US Overdose Deaths</h3>
+        <span class="status live">Complete</span>
+      </div>
+      <p>Analysis of CDC SUDORS data tracking xylazine's spread through the fentanyl supply, 2020-2024, covering the national trend, geographic spread, current state-by-state severity, and regional divergence.</p>
+
+      <button class="disclose" aria-expanded="false"><span class="caret">▶</span>How it works</button>
+      <div class="detail">
+        <div class="detail-inner">
+          <p><strong>The trend.</strong> In a consistent 27-state panel, xylazine went from 3.79% of overdose deaths in 2020 to 12.55% in 2024, more than tripling, even as total overdose deaths in those states fell.</p>
+          <p><strong>The acceleration.</strong> Delaware went from 0.7% in 2020 to 38.2% in 2024, a 37.5 point jump in four years. States that had xylazine earliest did not plateau while others caught up: Massachusetts has had it since 2020 and still climbed 17.6 points since then.</p>
+          <p><strong>Testing that finding.</strong> Correlating first-detection year against 2024 severity across 42 states gives r = -0.24, p = 0.122, not statistically significant. Timing of first detection does not reliably predict how bad a state's problem is now.</p>
+          <p><strong>Regional divergence.</strong> The Northeast has led the entire period and never stopped climbing (6.1% to 22.0%). The West has stayed under 1.5% the whole time. The South plateaued for two years, then jumped sharply in 2024.</p>
+        </div>
+      </div>
+
+      <div class="stack"><span class="tag">Python</span><span class="tag">pandas</span><span class="tag">SciPy</span><span class="tag">matplotlib</span><span class="tag">CDC data</span></div>
+      <div class="links"><a href="https://github.com/Savannahwilcox/xylazine-spread-analysis">Repository</a></div>
+    </article>
+
     <article class="project" data-tools="SQL,Excel">
       <div class="project-top">
         <h3>Clinic Operations Analytics</h3>
@@ -369,19 +391,8 @@ footer{padding:38px 0;font-size:.79rem;color:var(--ink-soft);border-top:1px soli
       <div class="stack"><span class="tag">Python</span><span class="tag">pandas</span><span class="tag">Tableau</span><span class="tag">CDC data</span></div>
       <div class="links"><a href="https://github.com/Savannahwilcox/healthcare-analytics-dashboard">Repository</a> <a href="https://public.tableau.com/app/profile/savannah.wilcox4290/viz/TheStateofHospitalInfectionPreventioninAmerica/Dashboard1">Dashboard</a></div>
     </article>
- 
-    <article class="project" data-tools="Python,pandas,Tableau,CMS data">
-      <div class="project-top">
-        <h3>Medicare Drug Pricing Analysis</h3>
-        <span class="status live">Complete</span>
-      </div>
-      <p>End-to-end analysis of Medicare Part D drug spending ($577.3B across 14,536 drugs). Two professional dashboards revealing 73% price increase, spending concentration, and manufacturer pricing strategies.</p>
-      <div class="stack"><span class="tag">Python</span><span class="tag">pandas</span><span class="tag">Tableau</span><span class="tag">CMS data</span></div>
-      <div class="links"><a href="https://github.com/Savannahwilcox/drug-pricing-analysis">Repository</a> <a href="https://public.tableau.com/app/profile/savannah.wilcox4290/viz/MedicareDrugPricingCrisis2024/TheProblemDrugPricingCrisis">Dashboard 1</a> <a href="https://public.tableau.com/app/profile/savannah.wilcox4290/viz/DrugManufacturersWhosResponsible/ThePlayersWhosResponsible">Dashboard 2</a></div>
-    </article>
- 
- 
-    <article class="project" data-tools="Python,pandas,Plotly,Tableau,CDC data">
+
+<article class="project" data-tools="Python,pandas,Plotly,Tableau,CDC data">
       <div class="project-top">
         <h3>US Drug Overdose Mortality Trends</h3>
         <span class="status live">Complete</span>
@@ -421,6 +432,22 @@ footer{padding:38px 0;font-size:.79rem;color:var(--ink-soft);border-top:1px soli
 
       <div class="stack"><span class="tag">Python</span><span class="tag">pandas</span><span class="tag">statsmodels</span><span class="tag">Streamlit</span><span class="tag">CDC data</span></div>
       <div class="links"><a href="https://github.com/Savannahwilcox/health-dashboard">Repository</a> <a href="https://health-dashboard-qbnntdzwx4vrjertgevr4m.streamlit.app/">Live App</a></div>
+    </article>
+
+    <article class="project" data-tools="SQL,PostgreSQL,Tableau,CMS data">
+      <div class="project-top">
+        <h3>Hospital Operations &amp; Quality Analytics</h3>
+        <span class="status live">Complete</span>
+      </div>
+      <p>PostgreSQL and Tableau analysis of CMS Hospital Compare data covering hospital characteristics, patient experience, and emergency department quality measures across 5,432 hospitals.</p>
+      <div class="stack"><span class="tag">SQL</span><span class="tag">PostgreSQL</span><span class="tag">Tableau</span><span class="tag">CMS data</span></div>
+      <div class="links">
+        <a href="https://github.com/Savannahwilcox/hospital-operations-analytics">Repository</a>
+        <a href="https://public.tableau.com/app/profile/savannah.wilcox4290/viz/HospitalOperationsQualityAnalyticsDB1/ExecutiveOverview">Executive Overview</a>
+        <a href="https://public.tableau.com/app/profile/savannah.wilcox4290/viz/HospitalOperationsQualityAnalyticsDB2/QualityMeasures">Quality Measures</a>
+        <a href="https://public.tableau.com/app/profile/savannah.wilcox4290/viz/HospitalOperationsQualityAnalyticsDB3/PatientExperience">Patient Experience</a>
+        <a href="https://public.tableau.com/app/profile/savannah.wilcox4290/viz/HospitalOperationsQualityAnalyticsDB4/TXDeepDive">Texas Deep Dive</a>
+      </div>
     </article>
 
     <div class="empty" id="empty">No projects use that tool yet.</div>
