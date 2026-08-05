@@ -276,6 +276,8 @@ footer{padding:38px 0;font-size:.79rem;color:var(--ink-soft);border-top:1px soli
       <button class="chip" data-tool="pandas">pandas</button>
       <button class="chip" data-tool="JavaScript">JavaScript</button>
       <button class="chip" data-tool="Excel">Excel</button>
+      <button class="chip" data-tool="Plotly">Plotly</button>
+      <button class="chip" data-tool="Streamlit">Streamlit</button>
     </div>
  
     <article class="project" data-tools="Python,pandas,CMS data">
@@ -379,6 +381,48 @@ footer{padding:38px 0;font-size:.79rem;color:var(--ink-soft);border-top:1px soli
     </article>
  
  
+    <article class="project" data-tools="Python,pandas,Plotly,Tableau,CDC data">
+      <div class="project-top">
+        <h3>US Drug Overdose Mortality Trends</h3>
+        <span class="status live">Complete</span>
+      </div>
+      <p>Analysis of CDC provisional drug overdose death data (2015-2026), tracking the recent decline in US overdose deaths and how it varies by drug type, state, and region.</p>
+
+      <button class="disclose" aria-expanded="false"><span class="caret">▶</span>How it works</button>
+      <div class="detail">
+        <div class="detail-inner">
+          <p><strong>The trend.</strong> US overdose deaths (12-month rolling total) rose from about 47,000 in 2015 to a peak of 111,466 in the year ending June 2023, then declined 39.4% to 67,531 by February 2026, driven overwhelmingly by falling synthetic opioid (fentanyl) deaths.</p>
+          <p><strong>The regional pattern.</strong> Grouping states into Census regions shows the crisis moved geographically over time: the Northeast and Midwest peaked earliest and have recovered the most, while the West started lowest, peaked latest (around 2024), and remains the highest-rate region today.</p>
+          <p><strong>The per-capita nuance.</strong> Raw counts and per-capita rates tell different stories about current burden. West Virginia has one of the steepest declines from its peak but still one of the highest current rates, while several Western states (Arizona, Nevada, Alaska) peaked much later (2024-2025) and remain both high-rate and early in their recovery.</p>
+          <p><strong>Limitation.</strong> Per-capita rates use a single 2025 population estimate applied across the full 2015-2026 period as a simplification, rather than year-matched population.</p>
+        </div>
+      </div>
+
+      <div class="stack"><span class="tag">Python</span><span class="tag">pandas</span><span class="tag">Plotly</span><span class="tag">Tableau</span><span class="tag">CDC data</span></div>
+      <div class="links"><a href="https://github.com/Savannahwilcox/overdose-trends">Repository</a> <a href="https://public.tableau.com/app/profile/savannah.wilcox4290/viz/USDrugOverdoseMortalityTrends/USDrugOverdoseMortalityTrends?publish=yes">Dashboard</a></div>
+    </article>
+
+    <article class="project" data-tools="Python,pandas,Streamlit,CDC data">
+      <div class="project-top">
+        <h3>County-Level Public Health Explorer</h3>
+        <span class="status live">Complete</span>
+      </div>
+      <p>Interactive dashboard exploring how food insecurity, insurance access, obesity, and smoking relate to diabetes prevalence across roughly 3,000 US counties, using CDC PLACES data.</p>
+
+      <button class="disclose" aria-expanded="false"><span class="caret">▶</span>How it works</button>
+      <div class="detail">
+        <div class="detail-inner">
+          <p><strong>The simple picture.</strong> Food insecurity correlates more strongly with diabetes prevalence (r = 0.77) than obesity (r = 0.67), smoking (r = 0.71), or lack of health insurance (r = 0.45).</p>
+          <p><strong>The confound check.</strong> A multiple regression controlling for obesity, smoking, insurance access, and food insecurity together (R² = 0.71) shows food insecurity is still the strongest independent predictor. Lack of insurance loses statistical significance (p = 0.076) once the other factors are accounted for, suggesting its simple correlation was largely explained by overlap with food insecurity (r = 0.74 between the two).</p>
+          <p><strong>The pattern.</strong> County-level diabetes rates follow the well-documented "Diabetes Belt," concentrated across the Southeastern US.</p>
+          <p><strong>What it can't show.</strong> This is county-level (ecological) data, meaning aggregated averages rather than individual patient records. The relationships are population-level patterns, not individual-level or causal claims.</p>
+        </div>
+      </div>
+
+      <div class="stack"><span class="tag">Python</span><span class="tag">pandas</span><span class="tag">statsmodels</span><span class="tag">Streamlit</span><span class="tag">CDC data</span></div>
+      <div class="links"><a href="https://github.com/Savannahwilcox/health-dashboard">Repository</a> <a href="https://health-dashboard-qbnntdzwx4vrjertgevr4m.streamlit.app/">Live App</a></div>
+    </article>
+
     <div class="empty" id="empty">No projects use that tool yet.</div>
   </div>
 </section>
