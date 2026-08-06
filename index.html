@@ -22,10 +22,10 @@
   --plum-soft:rgba(139,90,124,.14);
   --rule:#EFE4EA;
 }
-
+ 
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-
+ 
 body{
   background:var(--bone);
   color:var(--ink);
@@ -35,9 +35,9 @@ body{
   -webkit-font-smoothing:antialiased;
   overflow-x:hidden;
 }
-
+ 
 .wrap{max-width:860px;margin:0 auto;padding:0 28px;position:relative;z-index:2}
-
+ 
 h1,h2,h3{
   font-family:'Fraunces',Georgia,serif;
   font-variation-settings:'SOFT' 45,'WONK' 1;
@@ -48,20 +48,20 @@ h1,h2,h3{
 h1{font-size:clamp(2.7rem,7.5vw,4.4rem)}
 h2{font-size:clamp(1.8rem,4vw,2.4rem);margin-bottom:8px}
 h3{font-size:1.22rem;font-weight:600}
-
+ 
 .eyebrow{
   font-size:.71rem;font-weight:600;letter-spacing:.15em;
   text-transform:uppercase;color:var(--plum);margin-bottom:14px;
 }
-
+ 
 section{padding:92px 0;position:relative}
 .tint-peach{background:var(--peach)}
 .tint-lavender{background:var(--lavender)}
 .tint-mint{background:var(--mint)}
-
+ 
 .section-head{margin-bottom:42px;max-width:60ch}
 .section-head p{color:var(--ink-soft);margin-top:10px}
-
+ 
 /* ---------- hero with pastel blobs ---------- */
 .hero{padding:96px 0 84px;position:relative;overflow:hidden}
 .blob{
@@ -76,9 +76,9 @@ section{padding:92px 0;position:relative}
   from{transform:translate(0,0) scale(1)}
   to{transform:translate(26px,-22px) scale(1.09)}
 }
-
+ 
 .hero-grid{display:grid;grid-template-columns:164px 1fr;gap:38px;align-items:center}
-
+ 
 .portrait-frame{
   width:164px;height:164px;
   border-radius:50%;
@@ -93,10 +93,10 @@ section{padding:92px 0;position:relative}
   object-fit:cover;object-position:center 22%;
   display:block;
 }
-
+ 
 .hero p.lede{font-size:1.13rem;color:var(--ink-soft);margin-top:18px;max-width:52ch}
 .hero .meta{margin-top:22px;font-size:.85rem;color:var(--ink-soft);display:flex;flex-wrap:wrap;gap:8px 18px}
-
+ 
 /* ---------- filter bar ---------- */
 .filter-bar{
   display:flex;flex-wrap:wrap;gap:8px;align-items:center;
@@ -115,7 +115,7 @@ section{padding:92px 0;position:relative}
 .chip:hover{transform:translateY(-2px)}
 .chip.on{background:var(--plum);color:#fff;border-color:var(--plum)}
 .chip:focus-visible{outline:2px solid var(--plum);outline-offset:3px}
-
+ 
 /* ---------- project cards ---------- */
 .project{
   background:#fff;border:1px solid var(--rule);border-radius:18px;
@@ -125,7 +125,7 @@ section{padding:92px 0;position:relative}
 }
 .project:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(139,90,124,.13)}
 .project.hidden{display:none}
-
+ 
 .project-top{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
 .status{
   font-size:.68rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;
@@ -134,9 +134,9 @@ section{padding:92px 0;position:relative}
 .status.live{background:var(--mint);color:#2E6B5C}
 .status.progress{background:var(--butter);color:#8A6A18}
 .status.ongoing{background:var(--sky);color:#3A6285}
-
+ 
 .project p{margin-top:12px;color:var(--ink-soft)}
-
+ 
 .figures{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:22px 0 4px}
 .figure{border-radius:13px;padding:17px 19px}
 .figure:nth-child(1){background:var(--rose)}
@@ -146,14 +146,14 @@ section{padding:92px 0;position:relative}
   font-size:1.65rem;font-weight:700;display:block;margin-bottom:4px;line-height:1.1;
 }
 .figure .cap{font-size:.75rem;color:var(--ink-soft);line-height:1.45;display:block}
-
+ 
 .stack{margin-top:18px;display:flex;flex-wrap:wrap;gap:7px}
 .tag{
   font-size:.73rem;background:var(--bone);border:1px solid var(--rule);
   border-radius:6px;padding:3px 10px;color:var(--ink-soft);
 }
 .tag.match{background:var(--lavender);border-color:#CBB4E4;color:var(--plum);font-weight:500}
-
+ 
 .disclose{
   margin-top:18px;font-family:inherit;font-size:.84rem;font-weight:600;
   background:none;border:none;color:var(--plum);cursor:pointer;padding:0;
@@ -162,7 +162,7 @@ section{padding:92px 0;position:relative}
 .disclose:focus-visible{outline:2px solid var(--plum);outline-offset:3px;border-radius:3px}
 .disclose .caret{transition:transform .22s;display:inline-block;font-size:.7em}
 .disclose[aria-expanded="true"] .caret{transform:rotate(90deg)}
-
+ 
 .detail{max-height:0;overflow:hidden;transition:max-height .34s ease}
 .detail.open{max-height:620px}
 .detail-inner{
@@ -172,18 +172,18 @@ section{padding:92px 0;position:relative}
 }
 .detail-inner strong{color:var(--ink)}
 .detail-inner p + p{margin-top:11px}
-
+ 
 .links{margin-top:18px;display:flex;gap:20px;flex-wrap:wrap}
 a{color:var(--plum);text-decoration:none;border-bottom:1px solid rgba(139,90,124,.3);transition:border-color .18s}
 a:hover{border-bottom-color:var(--plum)}
 a:focus-visible{outline:2px solid var(--plum);outline-offset:3px;border-radius:2px}
-
+ 
 .empty{
   display:none;text-align:center;padding:44px;color:var(--ink-soft);
   background:#fff;border:1px dashed var(--rule);border-radius:18px;
 }
 .empty.show{display:block}
-
+ 
 /* ---------- skills ---------- */
 .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:26px}
 .skill-card{background:rgba(255,255,255,.6);border-radius:15px;padding:24px}
@@ -194,21 +194,21 @@ a:focus-visible{outline:2px solid var(--plum);outline-offset:3px;border-radius:2
 .skill-card ul{list-style:none}
 .skill-card li{padding:6px 0;border-bottom:1px solid rgba(46,42,46,.07);font-size:.93rem}
 .skill-card li:last-child{border-bottom:none}
-
+ 
 /* ---------- contact ---------- */
 .contact-links{display:flex;flex-direction:column;gap:13px;margin-top:24px;font-size:1.05rem}
 footer{padding:38px 0;font-size:.79rem;color:var(--ink-soft);border-top:1px solid var(--rule)}
-
+ 
 .reveal{opacity:0;transform:translateY(16px);transition:opacity .65s ease,transform .65s ease}
 .reveal.in{opacity:1;transform:none}
-
+ 
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .reveal{opacity:1;transform:none;transition:none}
   .blob{animation:none}
   .project,.chip{transition:none}
 }
-
+ 
 @media (max-width:640px){
   section{padding:66px 0}
   .hero{padding:70px 0 62px}
@@ -218,7 +218,7 @@ footer{padding:38px 0;font-size:.79rem;color:var(--ink-soft);border-top:1px soli
 </style>
 </head>
 <body>
-
+ 
 <div class="hero">
   <div class="blob blob-1"></div>
   <div class="blob blob-2"></div>
@@ -240,7 +240,7 @@ footer{padding:38px 0;font-size:.79rem;color:var(--ink-soft);border-top:1px soli
     </div>
   </div>
 </div>
-
+ 
 <section class="tint-peach reveal">
   <div class="wrap">
     <div class="section-head">
@@ -258,31 +258,36 @@ footer{padding:38px 0;font-size:.79rem;color:var(--ink-soft);border-top:1px soli
     </p>
   </div>
 </section>
-
+ 
 <section class="reveal">
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Projects</div>
       <h2>Selected work</h2>
     </div>
-
+ 
     <div class="filter-bar" id="filters">
       <span class="label">Filter</span>
       <button class="chip on" data-tool="all">All</button>
       <button class="chip" data-tool="Python">Python</button>
       <button class="chip" data-tool="SQL">SQL</button>
+      <button class="chip" data-tool="PostgreSQL">PostgreSQL</button>
+      <button class="chip" data-tool="Tableau">Tableau</button>
       <button class="chip" data-tool="pandas">pandas</button>
       <button class="chip" data-tool="JavaScript">JavaScript</button>
       <button class="chip" data-tool="Excel">Excel</button>
+      <button class="chip" data-tool="Plotly">Plotly</button>
+      <button class="chip" data-tool="Streamlit">Streamlit</button>
+      <button class="chip" data-tool="SciPy">SciPy</button>
     </div>
-
+ 
     <article class="project" data-tools="Python,pandas,CMS data">
       <div class="project-top">
         <h3>Hospital Readmissions by Ownership Type</h3>
         <span class="status live">Complete</span>
       </div>
       <p>Analysis of CMS Hospital Readmissions Reduction Program data covering 2,616 hospitals. For-profit hospitals average higher excess readmission ratios than nonprofits, and the gap holds after accounting for hospital size.</p>
-
+ 
       <button class="disclose" aria-expanded="false"><span class="caret">▶</span>How it works</button>
       <div class="detail">
         <div class="detail-inner">
@@ -292,52 +297,33 @@ footer{padding:38px 0;font-size:.79rem;color:var(--ink-soft);border-top:1px soli
           <p><strong>What it can't show.</strong> The confidence intervals for the two ownership groups don't overlap, so the difference isn't due to random variation. That rules out chance, not confounding. Unmeasured factors like local population health or access to post-discharge care could explain both.</p>
         </div>
       </div>
-
+ 
       <div class="stack"><span class="tag">Python</span><span class="tag">pandas</span><span class="tag">matplotlib</span><span class="tag">CMS data</span></div>
       <div class="links"><a href="https://github.com/Savannahwilcox/Hospital-Readmissions-">Repository</a></div>
     </article>
-
-        <article class="project" data-tools="Python,pandas,scikit-learn">
+ 
+    <article class="project" data-tools="Python,pandas,SciPy,CDC data">
       <div class="project-top">
-        <h3>Flight Price Predictor</h3>
-        <span class="status portfolio">Portfolio</span>
+        <h3>Xylazine ("Tranq") in US Overdose Deaths</h3>
+        <span class="status live">Complete</span>
       </div>
-      <p>Machine learning pipeline that trains a Random Forest classifier to predict whether flight prices will rise or fall. Demonstrates end-to-end data science workflow: data collection, model training, prediction, and analysis with visualizations.</p>
+      <p>Analysis of CDC SUDORS data tracking xylazine's spread through the fentanyl supply, 2020-2024, covering the national trend, geographic spread, current state-by-state severity, and regional divergence.</p>
 
-      <button class="disclose" aria-expanded="false"><span class="caret">▶</span>What this involved</button>
+      <button class="disclose" aria-expanded="false"><span class="caret">▶</span>How it works</button>
       <div class="detail">
         <div class="detail-inner">
-          <p><strong>Data collection.</strong> Sample dataset of 9 flights across 3 airlines and 2 routes.</p>
-          <p><strong>Model training.</strong> Random Forest classifier on 70% of data, evaluated on 30% holdout set.</p>
-          <p><strong>Analysis.</strong> Generated visualizations: price distribution by airline, price vs days until departure, and feature importance rankings.</p>
+          <p><strong>The trend.</strong> In a consistent 27-state panel, xylazine went from 3.79% of overdose deaths in 2020 to 12.55% in 2024, more than tripling, even as total overdose deaths in those states fell.</p>
+          <p><strong>The acceleration.</strong> Delaware went from 0.7% in 2020 to 38.2% in 2024, a 37.5 point jump in four years. States that had xylazine earliest did not plateau while others caught up: Massachusetts has had it since 2020 and still climbed 17.6 points since then.</p>
+          <p><strong>Testing that finding.</strong> Correlating first-detection year against 2024 severity across 42 states gives r = -0.24, p = 0.122, not statistically significant. Timing of first detection does not reliably predict how bad a state's problem is now.</p>
+          <p><strong>Regional divergence.</strong> The Northeast has led the entire period and never stopped climbing (6.1% to 22.0%). The West has stayed under 1.5% the whole time. The South plateaued for two years, then jumped sharply in 2024.</p>
         </div>
       </div>
 
-      <div class="stack"><span class="tag">Python</span><span class="tag">pandas</span><span class="tag">scikit-learn</span><span class="tag">matplotlib</span></div>
+      <div class="stack"><span class="tag">Python</span><span class="tag">pandas</span><span class="tag">SciPy</span><span class="tag">matplotlib</span><span class="tag">Tableau</span><span class="tag">CDC data</span></div>
       <div class="links">
-        <a href="https://github.com/Savannahwilcox/flight-price-predictor">Repository</a>
-      </div>
-    </article>
-
-    <article class="project" data-tools="Python,pandas,scikit-learn">
-      <div class="project-top">
-        <h3>Credit Card Fraud Detection</h3>
-        <span class="status portfolio">Portfolio</span>
-      </div>
-      <p>Comparison of unsupervised and supervised approaches to detect fraudulent credit card transactions. Analyzes 284K transactions with highly imbalanced fraud rate (0.17%) to demonstrate handling real-world data challenges.</p>
-
-      <button class="disclose" aria-expanded="false"><span class="caret">▶</span>What this involved</button>
-      <div class="detail">
-        <div class="detail-inner">
-          <p><strong>Anomaly detection.</strong> Isolation Forest catches 16.9% of fraud with 70.9% false positives—effective for unsupervised scenarios.</p>
-          <p><strong>Supervised classification.</strong> Random Forest achieves 76% recall and 0.967 ROC-AUC, catching 3x more fraud than anomaly detection.</p>
-          <p><strong>Analysis.</strong> V14, V4, V10 emerge as strongest fraud indicators. Demonstrated importance of class weighting for imbalanced data.</p>
-        </div>
-      </div>
-
-      <div class="stack"><span class="tag">Python</span><span class="tag">pandas</span><span class="tag">scikit-learn</span><span class="tag">Jupyter</span></div>
-      <div class="links">
-        <a href="https://github.com/Savannahwilcox/fraud-detection-analysis">Repository</a>
+        <a href="https://github.com/Savannahwilcox/xylazine-spread-analysis">Repository</a>
+        <a href="https://public.tableau.com/app/profile/savannah.wilcox4290/viz/XylazineSpreadAnalysis/DB1Trends">Trends</a>
+        <a href="https://public.tableau.com/app/profile/savannah.wilcox4290/viz/XylazineSpreadAnalysis2/DB2GeographySpread">Geography &amp; Spread</a>
       </div>
     </article>
 
@@ -347,20 +333,59 @@ footer{padding:38px 0;font-size:.79rem;color:var(--ink-soft);border-top:1px soli
         <span class="status ongoing">Ongoing</span>
       </div>
       <p>Internship work at a medical aesthetics and wellness clinic: reconciling the wellness service line's profit and loss, running the practice's first full inventory audit, building recurring KPI reporting from the practice management system, and modeling the revenue impact of membership pricing changes.</p>
-
+ 
       <button class="disclose" aria-expanded="false"><span class="caret">▶</span>What this involved</button>
       <div class="detail">
         <div class="detail-inner">
           <p><strong>Inventory audit.</strong> The practice's first, resolving stock balances that had drifted negative across multiple product lines by reconstructing historical purchase orders.</p>
           <p><strong>Financial reconciliation.</strong> Traced invoice-level discrepancies in the wellness service line back to their source in the ordering system, then documented the corrected margin.</p>
-          <p><strong>Reporting.</strong> Built the recurring KPI workflow the clinic now runs on, including provider-level performance analysis.</p>
+          <p><strong>Reporting.</strong> Built a KPI workflow including provider-level performance analysis.</p>
           <p>Client data, so no public repository, but happy to walk through the methodology.</p>
         </div>
       </div>
-
+ 
       <div class="stack"><span class="tag">SQL</span><span class="tag">Excel</span><span class="tag">Zenoti</span><span class="tag">Financial reconciliation</span></div>
     </article>
-
+ 
+    <article class="project" data-tools="SQL,PostgreSQL,Tableau,CMS data">
+      <div class="project-top">
+        <h3>Medicare Claims Analytics</h3>
+        <span class="status live">Complete</span>
+      </div>
+ 
+      <p>PostgreSQL and Tableau analysis of CMS synthetic Medicare beneficiary, inpatient, and outpatient claims data. The project includes relational database design, data validation, provider performance analysis, diagnosis cost analysis, and two interactive dashboards.</p>
+ 
+      <button class="disclose" aria-expanded="false">
+        <span class="caret">▶</span>What this involved
+      </button>
+ 
+      <div class="detail">
+        <div class="detail-inner">
+          <p><strong>Database development.</strong> Created raw staging and analysis-ready PostgreSQL tables for beneficiary, inpatient, and outpatient claims data.</p>
+ 
+          <p><strong>SQL analysis.</strong> Used joins, CTEs, window functions, CASE statements, aggregations, and validation queries to examine utilization, chronic conditions, provider performance, and Medicare spending.</p>
+ 
+          <p><strong>Executive reporting.</strong> Built an executive dashboard covering 116,352 synthetic beneficiaries, 66,547 inpatient claims, 779,225 outpatient claims, and $845.5 million in Medicare payments.</p>
+ 
+          <p><strong>Cost-driver analysis.</strong> Built a provider performance matrix and diagnosis-level analyses comparing claim volume, average payment, total reimbursement, and length of stay.</p>
+        </div>
+      </div>
+ 
+      <div class="stack">
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">SQL</span>
+        <span class="tag">Tableau</span>
+        <span class="tag">CMS data</span>
+        <span class="tag">Healthcare analytics</span>
+      </div>
+ 
+      <div class="links">
+        <a href="https://github.com/Savannahwilcox/healthcare-claims-sql-analysis">Repository</a>
+        <a href="https://public.tableau.com/app/profile/savannah.wilcox4290/viz/MedicareClaimsUtilizationPaymentAnalysisDB1/Dashboard1?publish=yes">Executive Dashboard</a>
+        <a href="https://public.tableau.com/app/profile/savannah.wilcox4290/viz/MedicareClaimsUtilizationPaymentAnalysisDB2/ProviderPerformanceCostDrivers?publish=yes">Provider Dashboard</a>
+      </div>
+    </article>
+ 
         <article class="project" data-tools="Python,pandas,Tableau,CDC data">
       <div class="project-top">
         <h3>Hospital Infection Prevention Analysis</h3>
@@ -371,21 +396,68 @@ footer{padding:38px 0;font-size:.79rem;color:var(--ink-soft);border-top:1px soli
       <div class="links"><a href="https://github.com/Savannahwilcox/hospital-infection-prevention-analysis">Repository</a> <a href="https://public.tableau.com/app/profile/savannah.wilcox4290/viz/TheStateofHospitalInfectionPreventioninAmerica/Dashboard1">Dashboard</a></div>
     </article>
 
-    <article class="project" data-tools="Python,pandas,Tableau,CMS data">
+<article class="project" data-tools="Python,pandas,Plotly,Tableau,CDC data">
       <div class="project-top">
-        <h3>Medicare Drug Pricing Analysis</h3>
+        <h3>US Drug Overdose Mortality Trends</h3>
         <span class="status live">Complete</span>
       </div>
-      <p>End-to-end analysis of Medicare Part D drug spending ($577.3B across 14,536 drugs). Two professional dashboards revealing 73% price increase, spending concentration, and manufacturer pricing strategies.</p>
-      <div class="stack"><span class="tag">Python</span><span class="tag">pandas</span><span class="tag">Tableau</span><span class="tag">CMS data</span></div>
-      <div class="links"><a href="https://github.com/Savannahwilcox/drug-pricing-analysis">Repository</a> <a href="https://public.tableau.com/app/profile/savannah.wilcox4290/viz/MedicareDrugPricingCrisis2024/TheProblemDrugPricingCrisis">Dashboard 1</a> <a href="https://public.tableau.com/app/profile/savannah.wilcox4290/viz/DrugManufacturersWhosResponsible/ThePlayersWhosResponsible">Dashboard 2</a></div>
+      <p>Analysis of CDC provisional drug overdose death data (2015-2026), tracking the recent decline in US overdose deaths and how it varies by drug type, state, and region.</p>
+
+      <button class="disclose" aria-expanded="false"><span class="caret">▶</span>How it works</button>
+      <div class="detail">
+        <div class="detail-inner">
+          <p><strong>The trend.</strong> US overdose deaths (12-month rolling total) rose from about 47,000 in 2015 to a peak of 111,466 in the year ending June 2023, then declined 39.4% to 67,531 by February 2026, driven overwhelmingly by falling synthetic opioid (fentanyl) deaths.</p>
+          <p><strong>The regional pattern.</strong> Grouping states into Census regions shows the crisis moved geographically over time: the Northeast and Midwest peaked earliest and have recovered the most, while the West started lowest, peaked latest (around 2024), and remains the highest-rate region today.</p>
+          <p><strong>The per-capita nuance.</strong> Raw counts and per-capita rates tell different stories about current burden. West Virginia has one of the steepest declines from its peak but still one of the highest current rates, while several Western states (Arizona, Nevada, Alaska) peaked much later (2024-2025) and remain both high-rate and early in their recovery.</p>
+          <p><strong>Limitation.</strong> Per-capita rates use a single 2025 population estimate applied across the full 2015-2026 period as a simplification, rather than year-matched population.</p>
+        </div>
+      </div>
+
+      <div class="stack"><span class="tag">Python</span><span class="tag">pandas</span><span class="tag">Plotly</span><span class="tag">Tableau</span><span class="tag">CDC data</span></div>
+      <div class="links"><a href="https://github.com/Savannahwilcox/overdose-trends">Repository</a> <a href="https://public.tableau.com/app/profile/savannah.wilcox4290/viz/USDrugOverdoseMortalityTrends/USDrugOverdoseMortalityTrends?publish=yes">Dashboard</a></div>
     </article>
 
+    <article class="project" data-tools="Python,pandas,Streamlit,CDC data">
+      <div class="project-top">
+        <h3>County-Level Public Health Explorer</h3>
+        <span class="status live">Complete</span>
+      </div>
+      <p>Interactive dashboard exploring how food insecurity, insurance access, obesity, and smoking relate to diabetes prevalence across roughly 3,000 US counties, using CDC PLACES data.</p>
+
+      <button class="disclose" aria-expanded="false"><span class="caret">▶</span>How it works</button>
+      <div class="detail">
+        <div class="detail-inner">
+          <p><strong>The simple picture.</strong> Food insecurity correlates more strongly with diabetes prevalence (r = 0.77) than obesity (r = 0.67), smoking (r = 0.71), or lack of health insurance (r = 0.45).</p>
+          <p><strong>The confound check.</strong> A multiple regression controlling for obesity, smoking, insurance access, and food insecurity together (R² = 0.71) shows food insecurity is still the strongest independent predictor. Lack of insurance loses statistical significance (p = 0.076) once the other factors are accounted for, suggesting its simple correlation was largely explained by overlap with food insecurity (r = 0.74 between the two).</p>
+          <p><strong>The pattern.</strong> County-level diabetes rates follow the well-documented "Diabetes Belt," concentrated across the Southeastern US.</p>
+          <p><strong>What it can't show.</strong> This is county-level (ecological) data, meaning aggregated averages rather than individual patient records. The relationships are population-level patterns, not individual-level or causal claims.</p>
+        </div>
+      </div>
+
+      <div class="stack"><span class="tag">Python</span><span class="tag">pandas</span><span class="tag">statsmodels</span><span class="tag">Streamlit</span><span class="tag">CDC data</span></div>
+      <div class="links"><a href="https://github.com/Savannahwilcox/health-dashboard">Repository</a> <a href="https://health-dashboard-qbnntdzwx4vrjertgevr4m.streamlit.app/">Live App</a></div>
+    </article>
+
+    <article class="project" data-tools="SQL,PostgreSQL,Tableau,CMS data">
+      <div class="project-top">
+        <h3>Hospital Operations &amp; Quality Analytics</h3>
+        <span class="status live">Complete</span>
+      </div>
+      <p>PostgreSQL and Tableau analysis of CMS Hospital Compare data covering hospital characteristics, patient experience, and emergency department quality measures across 5,432 hospitals.</p>
+      <div class="stack"><span class="tag">SQL</span><span class="tag">PostgreSQL</span><span class="tag">Tableau</span><span class="tag">CMS data</span></div>
+      <div class="links">
+        <a href="https://github.com/Savannahwilcox/hospital-operations-analytics">Repository</a>
+        <a href="https://public.tableau.com/app/profile/savannah.wilcox4290/viz/HospitalOperationsQualityAnalyticsDB1/ExecutiveOverview">Executive Overview</a>
+        <a href="https://public.tableau.com/app/profile/savannah.wilcox4290/viz/HospitalOperationsQualityAnalyticsDB2/QualityMeasures">Quality Measures</a>
+        <a href="https://public.tableau.com/app/profile/savannah.wilcox4290/viz/HospitalOperationsQualityAnalyticsDB3/PatientExperience">Patient Experience</a>
+        <a href="https://public.tableau.com/app/profile/savannah.wilcox4290/viz/HospitalOperationsQualityAnalyticsDB4/TXDeepDive">Texas Deep Dive</a>
+      </div>
+    </article>
 
     <div class="empty" id="empty">No projects use that tool yet.</div>
   </div>
 </section>
-
+ 
 <section class="tint-mint reveal">
   <div class="wrap">
     <div class="section-head">
@@ -401,10 +473,14 @@ footer{padding:38px 0;font-size:.79rem;color:var(--ink-soft);border-top:1px soli
         <h3>Healthcare operations</h3>
         <ul><li>Zenoti practice management</li><li>Revenue cycle concepts</li><li>Inventory reconciliation</li><li>Financial reconciliation</li><li>KPI reporting</li></ul>
       </div>
+      <div class="skill-card">
+        <h3>Certifications</h3>
+         <ul><li>Lean Six Sigma Yellow Belt</li><li>Certified Clinical Medical Assistant</li><li>Certified EKG Technician</li><li>HIPAA Compliant</li></ul>
+      </div>
     </div>
   </div>
 </section>
-
+ 
 <section class="tint-lavender reveal">
   <div class="wrap">
     <div class="section-head">
@@ -419,18 +495,18 @@ footer{padding:38px 0;font-size:.79rem;color:var(--ink-soft);border-top:1px soli
     </div>
   </div>
 </section>
-
+ 
 <footer>
-  <div class="wrap">Last updated July 2026.</div>
+  <div class="wrap">Last updated August 2026.</div>
 </footer>
-
+ 
 <script>
 // scroll reveal
 const obs = new IntersectionObserver((es) => {
   es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
 }, { threshold: 0.08 });
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-
+ 
 // expandable detail panels
 document.querySelectorAll('.disclose').forEach(btn => {
   btn.addEventListener('click', () => {
@@ -440,34 +516,34 @@ document.querySelectorAll('.disclose').forEach(btn => {
     panel.classList.toggle('open', !open);
   });
 });
-
+ 
 // tool filtering
 const chips = document.querySelectorAll('.chip');
 const projects = document.querySelectorAll('.project');
 const empty = document.getElementById('empty');
-
+ 
 chips.forEach(chip => {
   chip.addEventListener('click', () => {
     chips.forEach(c => c.classList.remove('on'));
     chip.classList.add('on');
     const tool = chip.dataset.tool;
     let shown = 0;
-
+ 
     projects.forEach(p => {
       const tools = p.dataset.tools.split(',');
       const match = tool === 'all' || tools.includes(tool);
       p.classList.toggle('hidden', !match);
       if (match) shown++;
-
+ 
       p.querySelectorAll('.tag').forEach(t => {
         t.classList.toggle('match', tool !== 'all' && t.textContent.trim() === tool);
       });
     });
-
+ 
     empty.classList.toggle('show', shown === 0);
   });
 });
-
+ 
 // count-up on the stat figures
 const counters = document.querySelectorAll('.val[data-count]');
 const cObs = new IntersectionObserver((es) => {
@@ -494,6 +570,9 @@ const cObs = new IntersectionObserver((es) => {
 }, { threshold: 0.5 });
 counters.forEach(c => cObs.observe(c));
 </script>
-
+ 
 </body>
 </html>
+ 
+
+
